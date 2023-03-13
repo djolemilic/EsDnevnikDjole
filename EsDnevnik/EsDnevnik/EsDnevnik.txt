@@ -1,0 +1,185 @@
+CREATE DATABASE EsDnevnik
+USE EsDnevnik
+
+--drop table ocena
+--drop table raspodela
+--drop table upisnica
+--drop table predmet
+--drop table odeljenje
+--drop table osoba
+--drop table smer
+--drop table skolska_godina
+
+CREATE TABLE Smer(
+id INT IDENTITY(1,1) PRIMARY KEY,
+naziv NVARCHAR(60)
+)
+
+CREATE TABLE Skolska_godina(
+id INT IDENTITY(1,1) PRIMARY KEY,
+naziv NVARCHAR(15)
+)
+
+CREATE TABLE Predmet(
+id INT IDENTITY(1,1) PRIMARY KEY,
+naziv NVARCHAR(20),
+razred INT
+)
+
+CREATE TABLE Osoba(
+id INT IDENTITY(1,1) PRIMARY KEY,
+ime NVARCHAR(20),
+prezime NVARCHAR(30),
+adresa NVARCHAR(30),
+jmbg VARCHAR(13),
+email VARCHAR(50),
+pass VARCHAR(20),
+uloga INT
+)
+
+
+CREATE TABLE Odeljenje(
+id INT IDENTITY(1,1) PRIMARY KEY,
+razred INT,
+indeks VARCHAR(10),
+smer_id INT FOREIGN KEY REFERENCES Smer(id),
+razredni_id INT FOREIGN KEY REFERENCES Osoba(id),
+godina_id INT FOREIGN KEY REFERENCES Skolska_godina(id)
+)
+
+CREATE TABLE Upisnica(
+id INT IDENTITY(1,1) PRIMARY KEY,
+osoba_id INT FOREIGN KEY REFERENCES Osoba(id),
+odeljenje_id INT FOREIGN KEY REFERENCES Odeljenje(id)
+)
+
+CREATE TABLE Raspodela(
+id INT IDENTITY(1,1) PRIMARY KEY,
+nastavnik_id INT FOREIGN KEY REFERENCES osoba(id),
+godina_id INT FOREIGN KEY REFERENCES Skolska_godina(id),
+predmet_id INT FOREIGN KEY REFERENCES Predmet(id),
+odeljenje_id INT FOREIGN KEY REFERENCES Odeljenje(id)
+)
+
+CREATE TABLE Ocena(
+id INT IDENTITY(1,1) PRIMARY KEY,
+datum DATE default GETDATE(),
+raspodela_id INT FOREIGN KEY REFERENCES Raspodela(id),
+ocena INT,
+ucenik_id INT FOREIGN KEY REFERENCES osoba(id)
+)
+
+
+
+INSERT INTO Smer
+VALUES('Prirodni')
+INSERT INTO Smer
+VALUES('Drustveni')
+INSERT INTO Smer
+VALUES('Informaticki') --3 (OVAJ)
+SELECT * FROM Smer
+
+INSERT INTO Skolska_godina
+VALUES('2019/20'); --1
+INSERT INTO Skolska_godina
+VALUES('2020/21'); --2 
+INSERT INTO Skolska_godina
+VALUES('2021/22'); --3
+INSERT INTO Skolska_godina
+VALUES('2022/23'); --4 (OVA)
+SELECT * FROM Skolska_godina
+
+INSERT INTO Predmet
+VALUES('Baze podataka 2', 4),
+('Programiranje', 3), 
+('Srpski jezik', 3),
+('Srpski jezik', 4),
+('Matematika',4),
+('Paradigme',4), 
+('Engleski jezik',4),
+('Fizika',4)
+--2 i 3 su predmeti iz treceg razreda (godina 2021/22)
+SELECT * FROM Predmet
+
+INSERT INTO Osoba
+VALUES('Jovan','Djordjevic','Adr1','0101004123456','jovan.djordjevic@gmail.com','011234',1),  --id1
+      ('Dusan','Zagorac','Adr2', '0201004123456','dusan.zagorac@gmail.com','021234',1), --id2
+	  ('Lazar','Marinkovic','Adr3', '0301004123456','lazar.marinkovic@gmail.com','031234',1), --id3
+	  ('Pavle','Kovacevic','Adr4', '0401004123456','pavle.kovacevic@gmail.com','041234',1), --id4
+      ('Zarko','Bacovic','Adr5', '0501004123456','zarko.bacovic@gmail.com','051234',1), --id5
+	  ('Stefan','Musikic','Adr6', '0601004123456','stefan.musikic@gmail.com','061234',1), --id6
+	  ('Nikola','Kotarenov','Adr7', '0701004123456','nikola.kotarenov@gmail.com','071234',1), --id7
+	  ('Petar','Vilotijevic','Adr8', '0801004123456','petar.vilotijevic@gmail.com','081234',1), --id8
+	  ('Aleksandar','Kamaljevic','Adr9', '0901004123456','aleksandar.kamaljevic@gmail.com','091234',1), --id9
+	  ('David','Ulnikovic','Adr10', '1001004123456','david.ulnikovic@gmail.com','101234',1), --id10
+	  ('David','Milenkovic','Adr11', '1101004123456','david.milenkovic@gmail.com','111234',1), --id11
+	  ('Stojna','Pusicic','Adr12', '1201004123456','stojna.pusicic@gmail.com','121234',1), --id12
+	  ('Ivona','Stevanovic','Adr13', '1301004123456','ivona.stevanovic@gmail.com','131234',1), --id13 
+	  ('Uros','Milicevic','Adr14', '1401004123456','uros.milicevic@gmail.com','141234',1), --id14
+	  ('Vuk','Srdanovic','Adr15', '1501004123456','vuk.srdanovic@gmail.com','151234',1), -- id15 
+	  ('Matija','Novovic','Adr16', '1601004123456','matija.novovic@gmail.com','161234',1), --id16  
+	  ('Nemanja','Lukic','Adr17', '1701004123456','nemanja.lukic@gmail.com','171234',1), --id17 
+	  ('Filip','Lucic','Adr18', '1801004123456','filip.lucic@gmail.com','181234',1), --id18  	  	  	  
+	  ('Dragana','Stojanovic','Adr19', '0101000123456','dragana.stojanovic@gmail.com','191234',2), --id19
+      ('Branko','Vrhovac','Adr20', '0201000123456','branko.vrhovac@gmail.com','201234',2), -- id20
+      ('Natasa','Majstrovic','Adr21', '0301000123456','natasa.majstrovic@gmail.com','211234',2), --id21
+      ('Nevena','Vasilic-Lukic','Adr22', '0401000123456','nevena.vasilic.lukuc@gmail.com','221234',2), --id22
+      ('Marina','Jovicic-Samardzija','Adr23', '0501000123456','marina.jovicic.samardzija@gmail.com','231234',2), --id23
+      ('Cedo','Skoric','Adr24', '0601000123456','cedo.skoric@gmail.com','241234',2), --id24
+	  ('Aleksa','Milojkovic','Adr25', '2309004198563','aleksa.milojkovic@gmail.com','251234',1), --id25
+	  ('Djordje','Milic','Adr26', '1704004153121','djordje.milic@gmail.com','261234',1), --id26
+	  ('Dusan','Maric','Adr27', '1911004198563','dusan.maric@gmail.com','271234',1), -- id27
+	  ('Dusan','Mijatovic','Adr28', '1510004198563','dusan.mijatovic@gmail.com','281234',1) -- id28
+SELECT * FROM Osoba
+      
+INSERT INTO Odeljenje
+VALUES(4,'10',3,19,4),(4,'9',3,24,4),(3,'10',3,19,3),(3,'9',3,24,3)
+SELECT * FROM Odeljenje
+
+INSERT INTO Upisnica
+VALUES (1,1),(2,1),(3,1),(4,1),(5,1),(6,1),(7,1),(8,1),(9,1),(10,1),(11,1),(12,1),(13,1),(14,1),(15,1),(16,1),(17,1),(18,1),(25,1),(26,1),(27,1),(28,1),
+       (1,3),(2,3),(3,3),(4,3),(5,3),(6,3),(7,3),(8,3),(9,3),(10,3),(11,3),(12,3),(13,3),(14,3),(15,3),(16,3),(17,3),(18,3),(25,3),(26,3),(27,3),(28,3)
+SELECT * FROM Upisnica
+
+
+
+INSERT INTO Raspodela VALUES
+(19,4,4,1), --D.Stojanovic, Srpski, 4.razred
+(19,3,3,3), --D.Stojanovic, Srpski, 3.razred
+(20,4,1,1), --B.Vrhovac, Baze2, 4.razred
+(20,3,2,3), --B.Vrhovac, Programiranje, 4.razred
+(21,4,6,1), --N.Majstrovic, Paradigme, 4.razred
+(22,4,5,1), --N.Vasilic-Lukic, Matematika, 4.razred 
+(23,4,7,1), --M.Jovicic-Samardzija, Engleski, 4.razred 
+(24,4,8,1)  --C.Skoric, Fizika, 4.razred 
+SELECT * FROM Raspodela
+
+--provera
+SELECT Osoba.ime + ' ' +Osoba.prezime AS Nastavnik, Skolska_godina.naziv AS Godina, Predmet.naziv AS Predmet, STR(Odeljenje.razred) + '/' +  Odeljenje.indeks AS Odeljenje FROM
+Raspodela left join Osoba ON Raspodela.nastavnik_id = Osoba.id
+left join Skolska_godina ON Raspodela.godina_id = Skolska_godina.id
+left join Predmet ON Raspodela.predmet_id = Predmet.id
+left join Odeljenje ON Raspodela.odeljenje_id = Odeljenje.id
+--kraj provere
+
+INSERT INTO Ocena(raspodela_id, ocena, ucenik_id) VALUES
+(1,3,2),
+(1,4,3),
+(1,5,4),
+(1,5,5),
+(1,4,6),
+(1,5,7),
+(3,2,2),
+(3,4,3),
+(3,5,4),
+(3,2,5),
+(3,4,6),
+(3,5,7),
+(5,3,2),
+(5,4,3),
+(5,5,4),
+(5,5,5),
+(5,4,6),
+(5,5,7)
+SELECT * FROM Ocena
+INF005\SQLEXPRESS
