@@ -92,3 +92,19 @@ C:\Users\IT GUY\Source\Repos\djolemilic\EsDnevnikDjole\EsDnevnik\EsDnevnik\EsDne
 C:\Users\IT GUY\Source\Repos\djolemilic\EsDnevnikDjole\EsDnevnik\EsDnevnik\EsDnevnik\obj\Debug\EsDnevnik.csproj.CoreCompileInputs.cache
 C:\Users\IT GUY\Source\Repos\djolemilic\EsDnevnikDjole\EsDnevnik\EsDnevnik\EsDnevnik\obj\Debug\EsDnevnik.exe
 C:\Users\IT GUY\Source\Repos\djolemilic\EsDnevnikDjole\EsDnevnik\EsDnevnik\EsDnevnik\obj\Debug\EsDnevnik.pdb
+C:\Users\ucenik\Source\Repos\djolemilic\EsDnevnikDjole\EsDnevnik\EsDnevnik\EsDnevnik\bin\Debug\EsDnevnik.exe.config
+C:\Users\ucenik\Source\Repos\djolemilic\EsDnevnikDjole\EsDnevnik\EsDnevnik\EsDnevnik\bin\Debug\EsDnevnik.exe
+C:\Users\ucenik\Source\Repos\djolemilic\EsDnevnikDjole\EsDnevnik\EsDnevnik\EsDnevnik\bin\Debug\EsDnevnik.pdb
+C:\Users\ucenik\Source\Repos\djolemilic\EsDnevnikDjole\EsDnevnik\EsDnevnik\EsDnevnik\obj\Debug\EsDnevnik.csproj.AssemblyReference.cache
+C:\Users\ucenik\Source\Repos\djolemilic\EsDnevnikDjole\EsDnevnik\EsDnevnik\EsDnevnik\obj\Debug\EsDnevnik.Form1.resources
+C:\Users\ucenik\Source\Repos\djolemilic\EsDnevnikDjole\EsDnevnik\EsDnevnik\EsDnevnik\obj\Debug\EsDnevnik.Ocene.resources
+C:\Users\ucenik\Source\Repos\djolemilic\EsDnevnikDjole\EsDnevnik\EsDnevnik\EsDnevnik\obj\Debug\EsDnevnik.Odeljenje.resources
+C:\Users\ucenik\Source\Repos\djolemilic\EsDnevnikDjole\EsDnevnik\EsDnevnik\EsDnevnik\obj\Debug\EsDnevnik.Osoba.resources
+C:\Users\ucenik\Source\Repos\djolemilic\EsDnevnikDjole\EsDnevnik\EsDnevnik\EsDnevnik\obj\Debug\EsDnevnik.Properties.Resources.resources
+C:\Users\ucenik\Source\Repos\djolemilic\EsDnevnikDjole\EsDnevnik\EsDnevnik\EsDnevnik\obj\Debug\EsDnevnik.Forma.resources
+C:\Users\ucenik\Source\Repos\djolemilic\EsDnevnikDjole\EsDnevnik\EsDnevnik\EsDnevnik\obj\Debug\EsDnevnik.Raspodela.resources
+C:\Users\ucenik\Source\Repos\djolemilic\EsDnevnikDjole\EsDnevnik\EsDnevnik\EsDnevnik\obj\Debug\EsDnevnik.Upisnica.resources
+C:\Users\ucenik\Source\Repos\djolemilic\EsDnevnikDjole\EsDnevnik\EsDnevnik\EsDnevnik\obj\Debug\EsDnevnik.csproj.GenerateResource.cache
+C:\Users\ucenik\Source\Repos\djolemilic\EsDnevnikDjole\EsDnevnik\EsDnevnik\EsDnevnik\obj\Debug\EsDnevnik.csproj.CoreCompileInputs.cache
+C:\Users\ucenik\Source\Repos\djolemilic\EsDnevnikDjole\EsDnevnik\EsDnevnik\EsDnevnik\obj\Debug\EsDnevnik.exe
+C:\Users\ucenik\Source\Repos\djolemilic\EsDnevnikDjole\EsDnevnik\EsDnevnik\EsDnevnik\obj\Debug\EsDnevnik.pdb

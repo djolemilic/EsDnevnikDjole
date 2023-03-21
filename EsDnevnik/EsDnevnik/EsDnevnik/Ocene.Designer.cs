@@ -29,63 +29,38 @@
         private void InitializeComponent()
         {
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            this.Obrisi = new System.Windows.Forms.DataGridViewButtonColumn();
-            this.Menjaj = new System.Windows.Forms.DataGridViewButtonColumn();
-            this.Dodaj = new System.Windows.Forms.DataGridViewButtonColumn();
             this.Id = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Datum = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Ime_i_prezime = new System.Windows.Forms.DataGridViewComboBoxColumn();
             this.Ocena = new System.Windows.Forms.DataGridViewComboBoxColumn();
             this.Predmet = new System.Windows.Forms.DataGridViewComboBoxColumn();
+            this.Obrisi = new System.Windows.Forms.DataGridViewButtonColumn();
+            this.Menjaj = new System.Windows.Forms.DataGridViewButtonColumn();
+            this.Dodaj = new System.Windows.Forms.DataGridViewButtonColumn();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.SuspendLayout();
             // 
             // dataGridView1
             // 
+            this.dataGridView1.BackgroundColor = System.Drawing.SystemColors.HotTrack;
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridView1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.Obrisi,
-            this.Menjaj,
-            this.Dodaj,
             this.Id,
             this.Datum,
             this.Ime_i_prezime,
             this.Ocena,
-            this.Predmet});
-            this.dataGridView1.Location = new System.Drawing.Point(55, 66);
+            this.Predmet,
+            this.Obrisi,
+            this.Menjaj,
+            this.Dodaj});
+            this.dataGridView1.Location = new System.Drawing.Point(36, 40);
+            this.dataGridView1.Margin = new System.Windows.Forms.Padding(2);
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.RowHeadersWidth = 51;
             this.dataGridView1.RowTemplate.Height = 24;
-            this.dataGridView1.Size = new System.Drawing.Size(1213, 475);
+            this.dataGridView1.Size = new System.Drawing.Size(910, 386);
             this.dataGridView1.TabIndex = 0;
             this.dataGridView1.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellContentClick);
-            // 
-            // Obrisi
-            // 
-            this.Obrisi.HeaderText = "Obrisi";
-            this.Obrisi.MinimumWidth = 6;
-            this.Obrisi.Name = "Obrisi";
-            this.Obrisi.Text = "Obrisi";
-            this.Obrisi.UseColumnTextForButtonValue = true;
-            this.Obrisi.Width = 125;
-            // 
-            // Menjaj
-            // 
-            this.Menjaj.HeaderText = "Menjaj";
-            this.Menjaj.MinimumWidth = 6;
-            this.Menjaj.Name = "Menjaj";
-            this.Menjaj.Text = "Menjaj";
-            this.Menjaj.UseColumnTextForButtonValue = true;
-            this.Menjaj.Width = 125;
-            // 
-            // Dodaj
-            // 
-            this.Dodaj.HeaderText = "Dodaj";
-            this.Dodaj.MinimumWidth = 6;
-            this.Dodaj.Name = "Dodaj";
-            this.Dodaj.Text = "Dodaj";
-            this.Dodaj.UseColumnTextForButtonValue = true;
-            this.Dodaj.Width = 125;
             // 
             // Id
             // 
@@ -135,12 +110,41 @@
             this.Predmet.Name = "Predmet";
             this.Predmet.Width = 125;
             // 
+            // Obrisi
+            // 
+            this.Obrisi.HeaderText = "Obrisi";
+            this.Obrisi.MinimumWidth = 6;
+            this.Obrisi.Name = "Obrisi";
+            this.Obrisi.Text = "Obrisi";
+            this.Obrisi.UseColumnTextForButtonValue = true;
+            this.Obrisi.Width = 125;
+            // 
+            // Menjaj
+            // 
+            this.Menjaj.HeaderText = "Menjaj";
+            this.Menjaj.MinimumWidth = 6;
+            this.Menjaj.Name = "Menjaj";
+            this.Menjaj.Text = "Menjaj";
+            this.Menjaj.UseColumnTextForButtonValue = true;
+            this.Menjaj.Width = 125;
+            // 
+            // Dodaj
+            // 
+            this.Dodaj.HeaderText = "Dodaj";
+            this.Dodaj.MinimumWidth = 6;
+            this.Dodaj.Name = "Dodaj";
+            this.Dodaj.Text = "Dodaj";
+            this.Dodaj.UseColumnTextForButtonValue = true;
+            this.Dodaj.Width = 125;
+            // 
             // Ocene
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1308, 567);
+            this.BackColor = System.Drawing.SystemColors.Highlight;
+            this.ClientSize = new System.Drawing.Size(981, 461);
             this.Controls.Add(this.dataGridView1);
+            this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "Ocene";
             this.Text = "Ocene";
             this.Load += new System.EventHandler(this.Ocene_Load);
@@ -152,13 +156,13 @@
         #endregion
 
         private System.Windows.Forms.DataGridView dataGridView1;
-        private System.Windows.Forms.DataGridViewButtonColumn Obrisi;
-        private System.Windows.Forms.DataGridViewButtonColumn Menjaj;
-        private System.Windows.Forms.DataGridViewButtonColumn Dodaj;
         private System.Windows.Forms.DataGridViewTextBoxColumn Id;
         private System.Windows.Forms.DataGridViewTextBoxColumn Datum;
         private System.Windows.Forms.DataGridViewComboBoxColumn Ime_i_prezime;
         private System.Windows.Forms.DataGridViewComboBoxColumn Ocena;
         private System.Windows.Forms.DataGridViewComboBoxColumn Predmet;
+        private System.Windows.Forms.DataGridViewButtonColumn Obrisi;
+        private System.Windows.Forms.DataGridViewButtonColumn Menjaj;
+        private System.Windows.Forms.DataGridViewButtonColumn Dodaj;
     }
 }
